@@ -1,36 +1,69 @@
 .hexagon {
-  overflow: hidden;
-  visibility: hidden;
-  -webkit-transform: rotate(120deg);
-  -moz-transform: rotate(120deg);
-  -ms-transform: rotate(120deg);
-  -o-transform: rotate(120deg);
-  transform: rotate(120deg);
-  cursor: pointer;
-  width: 400px;
-  height: 200px;
-  margin: 0 0 0 -80px;
+	width: 200px;
+	height: 230px;
+	position: relative;
+	display: inline-block;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  margin: 20px;
 }
-.hexagon-in1 {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: rotate(-60deg);
-  -moz-transform: rotate(-60deg);
-  -ms-transform: rotate(-60deg);
-  -o-transform: rotate(-60deg);
-  transform: rotate(-60deg);
+
+.rectangle {
+	overflow: hidden;
+	visibility: hidden;
+
+	-webkit-transform: rotate(120deg);
+	-moz-transform: rotate(120deg);
+	-o-transform: rotate(120deg);
+	-ms-transform: rotate(120deg);
+	transform: rotate(120deg);
+	cursor: pointer; 
+	position: absolute;
+	width: 200px;
+	height: 400px;
+	top: -85px;
 }
-.hexagon-in2 {
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-image: url(https://placeimg.com/640/480/any);
-  visibility: visible;
-  -webkit-transform: rotate(-60deg);
-  -moz-transform: rotate(-60deg);
-  -ms-transform: rotate(-60deg);
-  -o-transform: rotate(-60deg);
-  transform: rotate(-60deg);
+
+.rectangle2 {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+
+	-webkit-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	transform: rotate(-60deg);
 }
+
+.rectangle3 {
+	-webkit-box-shadow: inset 0 0 0 200px rgba(176, 218, 212, 0.48);
+	box-shadow: inset 0 0 0 200px rgba(176, 218, 212, 0.48);
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 50%;
+
+	-webkit-background-size: 125%;
+	-moz-background-size: 125%;
+	background-size: 125%;
+	visibility: visible;
+
+	-webkit-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+
