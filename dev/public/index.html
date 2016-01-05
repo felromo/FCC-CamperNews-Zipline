@@ -2,7 +2,10 @@
 <head>
   <meta charset="utf-8">
 	<title>"CamperNews"</title>
-	<link rel="stylesheet" href="includes/main.css">
+	<link rel="stylesheet" href="includes/main.css" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body ng-controller="newsController as newsCtl">
 
@@ -15,7 +18,7 @@
       <div class="news-details">
         <p>
         {{article.title}}
-        <span class="votes">{{article.upvotes}}</span>
+        <span class="votes"><i class="fa fa-heart"></i> {{article.upvotes}}</span>
         </p>
       </div><!-- end news-details -->
     </li>
