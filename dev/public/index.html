@@ -1,159 +1,21 @@
 <html ng-app="newsApp">
 <head>
+  <meta charset="utf-8">
 	<title>"CamperNews"</title>
 	<link rel="stylesheet" href="includes/main.css">
 </head>
 <body ng-controller="newsController as newsCtl">
-  <div class="row">
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-  </div><!-- end of row -->
-  <div class="row">
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-  </div><!-- end of row -->
-  <div class="row">
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-  </div><!-- end of row -->
-  <div class="row">
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-    <div class="hexagon">
-      <div class="rectangle">
-        <div class="rectangle2">
-          <div class="rectangle3" ><div class="hex-bg"></div></div>
-        </div><!-- end of retangle2 -->
-      </div><!-- end of rectangle -->
-    </div><!-- end of hexagon -->
-  </div><!-- end of row -->
+
+  <ul class="dynamic-grid" angular-grid="pics" grid-width="300" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="false">
+    <li class="grid" data-ng-repeat="pic in pics track by $index">
+      <img class="grid-img image-unit"  ng-src="{{pic}}" alt="news-display" data-actual-width="300" data-actual-height="300" />
+    </li>
+  </ul>
+
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angulargrid/angulargrid.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
   <script src="includes/main.js"></script>
 </body>
 </html>

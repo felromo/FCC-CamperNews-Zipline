@@ -1,128 +1,34 @@
-$offset: 50px;
-$hexagon-width: 200px + $offset;
-$hexagon-height: 230px + $offset;
-$hexagon-spacing: $hexagon-width / 2;
-$base-width: 200px + $offset;
-$base-height: 400px + $offset;
-$base-top: -85px;
+$border-color-light: #1485cc;
+$border-color-dark: #0971b2;
+
+.grid {
+  border: 1px solid #ccc;
+  background: #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+  border-radius: 25px;
+  // border: 4px solid $border-color-light;
+}
+
+.grid-img {
+  width: 100%;
+  vertical-align: middle;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 25px;
+  border: 4px solid $border-color-light;
+}
 
 * {
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
+  list-style-type: none;
 }
 
-body {
-  counter-reset: section;
-  height: 0;
-}
-
-.row {
-  counter-increment: section;
-  &:nth-child(n + 2) {
-    counter-increment: section;
-    $test: section;
-    position: relative;
-    top: -300px;
-  }
-}
-
-.hexagon {
-  display: inline-block;
-  height: $hexagon-height;
-  margin: 0 $hexagon-spacing;
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  width: $hexagon-width;
-  &:nth-child(4) {
-    margin-left: 378px;
-    position: relative;
-    top: -150px;
-  }
-  &:nth-child(5) {
-    position: relative;
-    top: -150px;
-  }
-}
-
-.rectangle {
-  cursor: pointer;
-  height: $base-height;
-  overflow: hidden;
-  position: absolute;
-
-  -moz-transform: rotate(120deg);
-  -ms-transform: rotate(120deg);
-  -o-transform: rotate(120deg);
-  -webkit-transform: rotate(120deg);
-  transform: rotate(120deg);
-  width: $base-width;
-  top: $base-top;
-  visibility: hidden;
-}
-
-.rectangle2 {
-  height: 100%;
-  overflow: hidden;
-
-  -moz-transform: rotate(-60deg);
-  -ms-transform: rotate(-60deg);
-  -o-transform: rotate(-60deg);
-  -webkit-transform: rotate(-60deg);
-  transform: rotate(-60deg);
-  width: 100%;
-}
-
-.rectangle3 {
-  height: 100%;
-
-  overflow: hidden;
-
-  background-size: 125%;
+.grid-img.img-loaded {
   visibility: visible;
-
-  -moz-transform: rotate(-60deg);
-  -ms-transform: rotate(-60deg);
-  -o-transform: rotate(-60deg);
-  -webkit-transform: rotate(-60deg);
-  transform: rotate(-60deg);
-
-  width: 100%;
-}
-
-.hex-bg {
-  background-image: url('http://placekitten.com/200/305');
-  background-position: 50% 70%;
-  background-repeat: no-repeat;
-
-  -moz-background-size: 120%;
-  -webkit-background-size: 120%;
-
-  height: 100%;
-
-
-  background-size: 100%;
-
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all .5s ease;
-
-  width: 115%;
-
-  &:hover {
-    box-shadow: inset 0 -200px 0 0 rgba(0, 0, 0, 0.48);
-  }
+  opacity: 1;
 }
