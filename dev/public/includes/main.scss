@@ -46,6 +46,12 @@ ul {
   opacity: 1;
 }
 
+span.votes {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 .hovergallery li{
   -webkit-transform:scale(0.8); /*Webkit: Scale down image to 0.8x original size*/
   -moz-transform:scale(0.8); /*Mozilla scale version*/
