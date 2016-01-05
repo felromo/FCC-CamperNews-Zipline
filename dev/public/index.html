@@ -6,7 +6,7 @@
 </head>
 <body ng-controller="newsController as newsCtl">
 
-  <ul class="dynamic-grid hovergallery" angular-grid="pics" grid-width="250" gutter-size="5" angular-grid-id="gallery" refresh-on-img-load="false">
+  <ul class="dynamic-grid hovergallery" angular-grid="articles" grid-width="250" gutter-size="5" angular-grid-id="gallery" refresh-on-img-load="false">
     <li class="grid" data-ng-repeat="article in articles track by $index">
       <img  class="grid-img"  ng-src="{{article.image}}" alt="news-display" data-actual-width="150" data-actual-height="150" />
       <!-- <p ng&#45;show="true">Some random text here</p> -->
