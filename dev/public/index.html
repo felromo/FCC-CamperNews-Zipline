@@ -8,7 +8,7 @@
 
   <ul class="dynamic-grid hovergallery" angular-grid="newsCtl.articles" grid-width="250" gutter-size="5" angular-grid-id="gallery" refresh-on-img-load="false">
     <li class="grid" data-ng-repeat="article in newsCtl.articles track by $index">
-      <img  class="grid-img"  ng-src="{{article.image}}" alt="news-display" data-actual-width="150" data-actual-height="150" />
+      <a href="{{article.link}}" target="_blank"><img  class="grid-img"  ng-src="{{article.image}}" alt="news-display" data-actual-width="150" data-actual-height="150" /></a>
       <!-- <p ng&#45;show="true">Some random text here</p> -->
       <div class="news-details">
         <p>
