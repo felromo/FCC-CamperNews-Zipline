@@ -8,7 +8,6 @@ angular.module('newsApp', ['angularGrid'])
 
 .controller('newsController', ['$scope', 'imageService', 'angularGridInstance', function ($scope, imageService, angularGridInstance) {
   self = this;
-  // self.pics;
 
   self.imageValues = function (image) {
     image.addEventListener('onload', function () {
@@ -17,7 +16,7 @@ angular.module('newsApp', ['angularGrid'])
     });
   };
 
-  $scope.refresh = function () {
+  self.refresh = function () {
     angularGridInstance.gallery.refresh();
   };
 
