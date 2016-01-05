@@ -41,6 +41,7 @@ angular.module('newsApp', ['angularGrid'])
           'image': image,
           'title': value.headline,
           'upvotes': value.rank,
+          'link': value.link,
         });
       });
 
