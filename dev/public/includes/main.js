@@ -42,6 +42,7 @@ angular.module('newsApp', ['angularGrid'])
           'title': value.headline,
           'upvotes': value.rank,
           'link': value.link,
+          'date': value.timePosted,
         });
       });
 

@@ -16,9 +16,11 @@
       <a href="{{article.link}}" target="_blank"><img  class="grid-img"  ng-src="{{article.image}}" alt="news-display" data-actual-width="150" data-actual-height="150" /></a>
       <!-- <p ng&#45;show="true">Some random text here</p> -->
       <div class="news-details">
-        <p>
+        <p class="description">
         {{article.title}}
-        <span class="votes"><i class="fa fa-heart"></i> {{article.upvotes}}</span>
+        </p>
+        <p class="extra-details">
+        <span class="date-posted"><i class="fa fa-clock-o"></i> {{article.date | date}}</span><span class="votes"><i class="fa fa-heart"></i> {{article.upvotes}}</span>
         </p>
       </div><!-- end news-details -->
     </li>
